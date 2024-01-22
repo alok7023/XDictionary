@@ -17,6 +17,7 @@ function App() {
 
   const handleSearch = (e) => {
     e.preventDefault();
+    console.log(inputWord);
     const filteredWord = dictionaryData.filter((meaning) =>
       meaning.word.toLowerCase().includes(inputWord.toLowerCase())
     );
@@ -24,6 +25,9 @@ function App() {
       filteredWord.length === 0 ? "Word not found in the dictionary." : ""
     );
     setSearchedWord(filteredWord);
+    setErrorMessage(
+      inputWord === ""? "Word not found in the dictionary." : ""
+    )
   };
   return (
     <div className="Container">

@@ -20,5 +20,6 @@
 .Container form button{
   padding: 0.5rem 1rem;
   border: 1px solid black;
+  cursor: pointer;
 }
 
