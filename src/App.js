@@ -22,12 +22,9 @@ function App() {
       meaning.word.toLowerCase().includes(inputWord.toLowerCase())
     );
     setErrorMessage(
-      filteredWord.length === 0 ? "Word not found in the dictionary." : ""
+      (filteredWord.length === 0 || inputWord==="") ? "Word not found in the dictionary." : ""
     );
     setSearchedWord(filteredWord);
-    setErrorMessage(
-      inputWord === ""? "Word not found in the dictionary." : ""
-    )
   };
   return (
     <div className="Container">
